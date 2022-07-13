@@ -86,9 +86,9 @@ public class BoardController {
     }
 
     @PostMapping("/modify")
-    public String modify( @Valid BoardDTO boardDTO,
+    public String modify( PageRequestDTO pageRequestDTO,
+                          @Valid BoardDTO boardDTO,
                           BindingResult bindingResult,
-                          PageRequestDTO pageRequestDTO,
                           RedirectAttributes redirectAttributes){
 
         log.info("board modify post......." + boardDTO);
